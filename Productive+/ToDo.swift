@@ -9,7 +9,26 @@ import SwiftUI
 
 struct ToDo: View {
     var body: some View {
-        Text("ToDo Page Wooooo!")
+        ZStack{
+            Image("todo")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fit)
+            //cut overflow scrollable div
+            Rectangle()
+                .frame(width: 250.0, height: 350.0)
+                .foregroundColor(.white)
+                .overlay(
+                    ScrollView
+                    {
+                        VStack(alignment: .leading){
+                            
+                        }
+                        
+                    }
+                )
+                .position(x:200, y:375)
+        }
+        
     }
 }
 
