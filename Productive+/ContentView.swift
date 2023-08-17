@@ -8,9 +8,14 @@ struct ContentView: View {
     @State private var path = NavigationPath()
     @State private var subtext = "Welcome to Productive+"
     @State private var navImg = "nav"
+    @State private var lampOn = false
+    
+    
     var body: some View {
         NavigationStack (path: $path){
             ZStack {
+                Color(.brown)
+                    .ignoresSafeArea()
                 Text("\(subtext)")
                     .zIndex(2)
                     .position(x: 200, y: 200)
@@ -61,7 +66,14 @@ struct ContentView: View {
                         else if Rect(x1: 30, y1: 390, x2: 84, y2: 458, location: location)
                         {
                             subtext = "conserve some energy"
-                            navImg = "lamp"
+                            if !lampOn {
+                                navImg = "lamp"
+                                lampOn = true
+                            } else {
+                                lampOn = false
+                                navImg = "nav"
+                                subtext = "welcome to productive+"
+                            }
                             print("in the lamp")
                         }
                         //post-it
