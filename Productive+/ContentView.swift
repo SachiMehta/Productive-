@@ -54,7 +54,7 @@ struct ContentView: View {
                 if view == "timer"
                 {
                     let _ = print("timer is being requested")
-                    Timer()
+                    StudyTimer()
                 }
                 
                 if view == "journal"
