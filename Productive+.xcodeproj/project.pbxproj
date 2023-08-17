@@ -17,9 +17,9 @@
 		BD0A72432A8BFCDC00B806E2 /* Productive_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A72422A8BFCDC00B806E2 /* Productive_UITests.swift */; };
 		BD0A72452A8BFCDC00B806E2 /* Productive_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A72442A8BFCDC00B806E2 /* Productive_UITestsLaunchTests.swift */; };
 		BD68B6202A8D733300AA689B /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68B61F2A8D733300AA689B /* Journal.swift */; };
-		BD68B6222A8D74BC00AA689B /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68B6212A8D74BC00AA689B /* ToDo.swift */; };
+		BD68B6222A8D74BC00AA689B /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68B6212A8D74BC00AA689B /* ToDoView.swift */; };
 		BDEF422A2A8D71410007A5F7 /* StudyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF42292A8D71410007A5F7 /* StudyTimer.swift */; };
-		BDEF422C2A8D71660007A5F7 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF422B2A8D71660007A5F7 /* Playlist.swift */; };
+		BDEF422C2A8D71660007A5F7 /* Breathing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF422B2A8D71660007A5F7 /* Breathing.swift */; };
 		F4AD7D652A8E6734003AB48F /* StudyTimer-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AD7D642A8E6734003AB48F /* StudyTimer-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,9 +54,9 @@
 		BD0A72422A8BFCDC00B806E2 /* Productive_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productive_UITests.swift; sourceTree = "<group>"; };
 		BD0A72442A8BFCDC00B806E2 /* Productive_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productive_UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BD68B61F2A8D733300AA689B /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
-		BD68B6212A8D74BC00AA689B /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		BD68B6212A8D74BC00AA689B /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 		BDEF42292A8D71410007A5F7 /* StudyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTimer.swift; sourceTree = "<group>"; };
-		BDEF422B2A8D71660007A5F7 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		BDEF422B2A8D71660007A5F7 /* Breathing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breathing.swift; sourceTree = "<group>"; };
 		F4AD7D642A8E6734003AB48F /* StudyTimer-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudyTimer-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,11 +110,11 @@
 			children = (
 				BD0A72222A8BFCD900B806E2 /* Productive_App.swift */,
 				BD0A72242A8BFCD900B806E2 /* ContentView.swift */,
-				BD68B6212A8D74BC00AA689B /* ToDo.swift */,
+				BD68B6212A8D74BC00AA689B /* ToDoView.swift */,
 				BDEF42292A8D71410007A5F7 /* StudyTimer.swift */,
 				F4AD7D642A8E6734003AB48F /* StudyTimer-ViewModel.swift */,
 				BD68B61F2A8D733300AA689B /* Journal.swift */,
-				BDEF422B2A8D71660007A5F7 /* Playlist.swift */,
+				BDEF422B2A8D71660007A5F7 /* Breathing.swift */,
 				BD0A72262A8BFCDC00B806E2 /* Assets.xcassets */,
 				BD0A722B2A8BFCDC00B806E2 /* Persistence.swift */,
 				BD0A722D2A8BFCDC00B806E2 /* Productive_.xcdatamodeld */,
@@ -281,12 +281,12 @@
 				BD0A722F2A8BFCDC00B806E2 /* Productive_.xcdatamodeld in Sources */,
 				BD0A722C2A8BFCDC00B806E2 /* Persistence.swift in Sources */,
 				BD0A72252A8BFCD900B806E2 /* ContentView.swift in Sources */,
-				BD68B6222A8D74BC00AA689B /* ToDo.swift in Sources */,
+				BD68B6222A8D74BC00AA689B /* ToDoView.swift in Sources */,
 				BDEF422A2A8D71410007A5F7 /* StudyTimer.swift in Sources */,
 				BD0A72232A8BFCD900B806E2 /* Productive_App.swift in Sources */,
 				F4AD7D652A8E6734003AB48F /* StudyTimer-ViewModel.swift in Sources */,
 				BD68B6202A8D733300AA689B /* Journal.swift in Sources */,
-				BDEF422C2A8D71660007A5F7 /* Playlist.swift in Sources */,
+				BDEF422C2A8D71660007A5F7 /* Breathing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

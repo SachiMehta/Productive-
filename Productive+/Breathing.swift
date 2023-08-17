@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Playlist: View {
+struct Breathing: View {
     var body: some View {
         Image("playlist")
             .resizable(resizingMode: .stretch)
@@ -15,8 +15,8 @@ struct Playlist: View {
     }
 }
 
-struct Playlist_Previews: PreviewProvider {
+struct Breathing_Previews: PreviewProvider {
     static var previews: some View {
-        Playlist()
+        Breathing()
     }
 }

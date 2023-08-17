@@ -7,7 +7,7 @@
 // cmt
 import SwiftUI
 
-struct ToDo: View {
+struct ToDoView: View {
     var body: some View {
         ZStack{
             Image("todo")
@@ -34,6 +34,6 @@ struct ToDo: View {
 
 struct ToDo_Previews: PreviewProvider {
     static var previews: some View {
-        ToDo()
+        ToDoView()
     }
 }
