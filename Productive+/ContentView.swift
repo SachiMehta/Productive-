@@ -1,21 +1,54 @@
-
-
-
-
-
+import AVKit
 import SwiftUI
+
 struct ContentView: View {
     @State private var path = NavigationPath()
     @State private var subtext = "Welcome to Productive+"
     @State private var navImg = "nav"
     @State private var lampOn = false
-    
+    // for music
+    @State var audioPlayer: AVAudioPlayer!
+    @State var playingMusic: Bool = false
     
     var body: some View {
         NavigationStack (path: $path){
             ZStack {
-                Color(.brown)
+                Color(red: 244 / 250, green: 236 / 250, blue: 236 / 250)
                     .ignoresSafeArea()
+                VStack {
+                    Button(action: {
+                        if !playingMusic {
+                            self.audioPlayer.play()
+                            playingMusic = true
+                        } else {
+                            self.audioPlayer.pause()
+                            playingMusic = false
+                        }
+                        
+                    }, label: {
+                        if !playingMusic {
+                            Image("musicOff")
+                                .resizable(resizingMode: .stretch)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 70.0)
+                                .zIndex(2)
+                                .position(x: 350)
+                        } else {
+                            Image("musicOn")
+                                .resizable(resizingMode: .stretch)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 70.0)
+                                .zIndex(2)
+                                .position(x: 350)
+                        }
+                    })
+                }.onAppear {
+                    let sound = Bundle.main.path(forResource: "Tokyo", ofType: "mp3")
+                    self.audioPlayer = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+                    // music will infinitely loop
+                    audioPlayer.numberOfLoops = -1
+                }
+
                 Text("\(subtext)")
                     .zIndex(2)
                     .position(x: 200, y: 200)

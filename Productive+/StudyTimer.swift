@@ -15,7 +15,7 @@ struct StudyTimer: View {
     
     var body: some View {
         ZStack {
-            Color(.brown)
+            Color(red: 244 / 250, green: 236 / 250, blue: 236 / 250)
                 .ignoresSafeArea()
             Image("timerBg")
                 .resizable()
@@ -35,7 +35,7 @@ struct StudyTimer: View {
                     .padding(.vertical)
                 
                 // binding here since user changes the #
-                Slider(value: $vm.minutes, in: 0...45, step: 1)
+                Slider(value: $vm.minutes, in: 0...45, step: 5)
                     .padding()
                 // if countdown already started disable the slider
                     .disabled(vm.isActive)
