@@ -11,8 +11,6 @@ struct ContentView: View {
     var body: some View {
         NavigationStack (path: $path){
             ZStack {
-                //hello peeps
-                Text("test")
                 Text("\(subtext)")
                     .zIndex(2)
                     .position(x: 200, y: 200)
