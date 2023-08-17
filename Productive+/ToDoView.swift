@@ -8,32 +8,82 @@
 import SwiftUI
 
 struct ToDoView: View {
+    @Environment(\.managedObjectContext) var context
+    @State var title: String
+    @FetchRequest(
+        entity: ToDo.entity(), sortDescriptors: [ NSSortDescriptor(keyPath: \ToDo.id, ascending: false) ])
+    
+    var toDoItems: FetchedResults<ToDo>
+    
     var body: some View {
-        ZStack{
-            Image("todo")
-                .resizable(resizingMode: .stretch)
-                .aspectRatio(contentMode: .fit)
-            //cut overflow scrollable div
-            Rectangle()
-                .frame(width: 250.0, height: 350.0)
-                .foregroundColor(.white)
-                .overlay(
-                    ScrollView
-                    {
-                        VStack(alignment: .leading){
-                            
+        VStack {
+            
+            ZStack{
+                Color(red: 0.959, green: 0.924, blue: 0.925)
+                          .ignoresSafeArea()
+                Image("todo")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                    .onTapGesture { location in
+                        if Elipse(x: 325, y:647, radius: 28, location: location)
+                        {
+                              self.addTask(title: self.title)
+                            title = ""
                         }
+                        print("tapped at \(location)")
+                        
                         
                     }
-                )
-                .position(x:200, y:375)
+                
+                //cut overflow scrollable div
+                Rectangle()
+                    .frame(width: 250.0, height: 350)
+                    .foregroundColor(.white)
+                    .overlay(
+                        VStack{
+                            List{
+                                ForEach(toDoItems){ todoItem in
+                                    
+                                     Text(todoItem.title ?? "No Title")
+                                    
+                                    
+                                }
+                                .listStyle(.plain)
+                            }
+                        }
+                        
+                        
+                    )
+                    .position(x:200, y:375)
+                TextField("Enter the task description...", text:$title)
+                    .padding(.horizontal)
+                    .frame(width: 250.0, height: 50.0)
+                    .background(.white)
+                    .position(x:150, y:650)
+                            }
+            
+                      
+            }
+            
+                        
         }
-        
+    private func addTask(title: String, isDone: Bool = false) {
+
+        let task = ToDo(context: context)
+        task.id = UUID()
+        task.title = title
+        task.isDone = isDone
+
+        do {
+           try context.save()
+        } catch {
+           print(error)
+        }
+        }
     }
-}
 
 struct ToDo_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoView()
+        ToDoView(title: "")
     }
 }

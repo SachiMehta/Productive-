@@ -157,7 +157,7 @@ struct ContentView: View {
                 if view == "todo"
                 {
                     let _ = print("todo is being requested")
-                    ToDoView()
+                    ToDoView(title: "")
                 }
             }
             
