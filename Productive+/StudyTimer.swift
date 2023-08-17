@@ -15,9 +15,11 @@ struct StudyTimer: View {
     
     var body: some View {
         ZStack {
-                Image("timerBg")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+            Color(.brown)
+                .ignoresSafeArea()
+            Image("timerBg")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
             VStack {
                 Text("Timer")
                     .font(.largeTitle)
@@ -45,7 +47,9 @@ struct StudyTimer: View {
                     Button("Start") {
                         vm.start(minutes: vm.minutes)
                             }
-                            .disabled(vm.isActive)
+                    .disabled(vm.isActive)
+                    .foregroundColor(.green)
+                    .buttonStyle(.borderedProminent)
                             
                     Button("Reset", action: vm.reset)
                                 .tint(.red)
