@@ -6,6 +6,20 @@
 //
 // cmt
 import SwiftUI
+import Foundation
+
+class todoItem: Identifiable
+{
+    var id = UUID()
+    var title = ""
+    var isDone = false
+    
+    init(title: String, isDone: Bool = false) {
+            self.title = title
+            self.isDone = isDone
+        }
+}
+
 
 struct ToDoView: View {
     @Environment(\.managedObjectContext) var context
@@ -19,39 +33,44 @@ struct ToDoView: View {
         VStack {
             
             ZStack{
-                Color(red: 0.959, green: 0.924, blue: 0.925)
-                          .ignoresSafeArea()
                 Image("todo")
                     .resizable(resizingMode: .stretch)
                     .aspectRatio(contentMode: .fit)
                     .onTapGesture { location in
                         if Elipse(x: 325, y:647, radius: 28, location: location)
                         {
-                              self.addTask(title: self.title)
+                            self.addTask(title: self.title)
                             title = ""
                         }
                         print("tapped at \(location)")
-                        
+
                         
                     }
-                
+
                 //cut overflow scrollable div
                 Rectangle()
                     .frame(width: 250.0, height: 350)
                     .foregroundColor(.white)
                     .overlay(
-                        VStack{
-                            List{
-                                ForEach(toDoItems){ todoItem in
+                            VStack{
+                                List{
+                                    ForEach(toDoItems){ todoItem in
+                                        HStack{
+                                            Image(systemName: todoItem.isDone ? "checkmark.square": "square")
+                                                            .onTapGesture {
+                                                                todoItem.isDone.toggle()
+                                                                try? context.save()
+                                                            }
+                                            Text(todoItem.title ?? "No Title")
+                                        }
+                                        
+                                    }
                                     
-                                     Text(todoItem.title ?? "No Title")
-                                    
-                                    
-                                }
-                                .listStyle(.plain)
+                                    .onDelete(perform: deleteTask)
+                                }.listStyle(.plain)
+                                
                             }
-                        }
-                        
+                            
                         
                     )
                     .position(x:200, y:375)
@@ -61,19 +80,28 @@ struct ToDoView: View {
                     .background(.white)
                     .position(x:150, y:650)
                             }
-            
-                      
             }
             
                         
         }
-    private func addTask(title: String, isDone: Bool = false) {
+    private func deleteTask(offsets: IndexSet) {
+            withAnimation {
+                offsets.map { toDoItems[$0] }.forEach(context.delete)
 
+                do {
+                    try context.save()
+                } catch {
+                    print(error)
+                }
+            }
+        }
+    private func addTask(title: String, isDone: Bool = false) {
+            
         let task = ToDo(context: context)
         task.id = UUID()
         task.title = title
         task.isDone = isDone
-
+                
         do {
            try context.save()
         } catch {

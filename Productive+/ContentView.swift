@@ -105,7 +105,7 @@ struct ContentView: View {
                             } else {
                                 lampOn = false
                                 navImg = "nav"
-                                subtext = "welcome to productive+"
+                                subtext = "study time!"
                             }
                             print("in the lamp")
                         }
