@@ -15,6 +15,7 @@ struct ContentView: View {
             ZStack {
                 Color(red: 0.959, green: 0.924, blue: 0.925)
                     .ignoresSafeArea()
+                
                 VStack {
                     Button(action: {
                         if !playingMusic {
@@ -144,19 +145,19 @@ struct ContentView: View {
                     Breathing()
                 }
                 
-                if view == "timer"
+                else if view == "timer"
                 {
                     let _ = print("timer is being requested")
                     StudyTimer()
                 }
                 
-                if view == "journal"
+                else if view == "journal"
                 {
                     let _ = print("journal is being requested")
                     Journal()
                 }
                 
-                if view == "todo"
+                else if view == "todo"
                 {
                     let _ = print("todo is being requested")
                     ToDoView(title: "")
