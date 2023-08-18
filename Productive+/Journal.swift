@@ -17,11 +17,11 @@ struct Journal: View {
             .frame(height: 100.0)})
       }
        TextField("Type out your feelings", text: $journalEntry, axis: .vertical)
+             .font(.system(size: 16, weight: .bold, design: .rounded))
          .padding(.all, 20.0)
          .frame(width: 250.0, height: 300.0)
-         .border(Color("popYellow"), width: 2)
-         .multilineTextAlignment(.center)
-         .foregroundColor(.accentColor)
+         .multilineTextAlignment(.leading)
+         .foregroundColor(.black)
      }
       }
     }
