@@ -31,7 +31,8 @@ struct ToDoView: View {
     
     var body: some View {
         VStack {
-            
+            Color(red: 0.959, green: 0.924, blue: 0.925)
+                      .ignoresSafeArea()
             ZStack{
                 Image("todo")
                     .resizable(resizingMode: .stretch)
