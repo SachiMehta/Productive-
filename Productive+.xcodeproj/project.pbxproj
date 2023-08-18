@@ -16,11 +16,11 @@
 		BD0A72392A8BFCDC00B806E2 /* Productive_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A72382A8BFCDC00B806E2 /* Productive_Tests.swift */; };
 		BD0A72432A8BFCDC00B806E2 /* Productive_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A72422A8BFCDC00B806E2 /* Productive_UITests.swift */; };
 		BD0A72452A8BFCDC00B806E2 /* Productive_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A72442A8BFCDC00B806E2 /* Productive_UITestsLaunchTests.swift */; };
-		BD57711F2A8EA19200CD7290 /* Tokyo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD57711E2A8EA19100CD7290 /* Tokyo.mp3 */; };
 		BD68B6202A8D733300AA689B /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68B61F2A8D733300AA689B /* Journal.swift */; };
 		BD68B6222A8D74BC00AA689B /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68B6212A8D74BC00AA689B /* ToDoView.swift */; };
 		BDEF422A2A8D71410007A5F7 /* StudyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF42292A8D71410007A5F7 /* StudyTimer.swift */; };
 		BDEF422C2A8D71660007A5F7 /* Breathing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF422B2A8D71660007A5F7 /* Breathing.swift */; };
+		F4821AE32A8F18EA006ED9D7 /* Tokyo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4821AE22A8F18EA006ED9D7 /* Tokyo.mp3 */; };
 		F4AD7D652A8E6734003AB48F /* StudyTimer-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AD7D642A8E6734003AB48F /* StudyTimer-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,11 +54,11 @@
 		BD0A723E2A8BFCDC00B806E2 /* Productive+UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Productive+UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0A72422A8BFCDC00B806E2 /* Productive_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productive_UITests.swift; sourceTree = "<group>"; };
 		BD0A72442A8BFCDC00B806E2 /* Productive_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productive_UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BD57711E2A8EA19100CD7290 /* Tokyo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Tokyo.mp3; path = ../../../Downloads/Tokyo.mp3; sourceTree = "<group>"; };
 		BD68B61F2A8D733300AA689B /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		BD68B6212A8D74BC00AA689B /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 		BDEF42292A8D71410007A5F7 /* StudyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTimer.swift; sourceTree = "<group>"; };
 		BDEF422B2A8D71660007A5F7 /* Breathing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breathing.swift; sourceTree = "<group>"; };
+		F4821AE22A8F18EA006ED9D7 /* Tokyo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Tokyo.mp3; path = ../../../../Downloads/Tokyo.mp3; sourceTree = "<group>"; };
 		F4AD7D642A8E6734003AB48F /* StudyTimer-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudyTimer-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0A72222A8BFCD900B806E2 /* Productive_App.swift */,
-				BD57711E2A8EA19100CD7290 /* Tokyo.mp3 */,
+				F4821AE22A8F18EA006ED9D7 /* Tokyo.mp3 */,
 				BD0A72242A8BFCD900B806E2 /* ContentView.swift */,
 				BD68B6212A8D74BC00AA689B /* ToDoView.swift */,
 				BDEF42292A8D71410007A5F7 /* StudyTimer.swift */,
@@ -255,7 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD57711F2A8EA19200CD7290 /* Tokyo.mp3 in Resources */,
+				F4821AE32A8F18EA006ED9D7 /* Tokyo.mp3 in Resources */,
 				BD0A722A2A8BFCDC00B806E2 /* Preview Assets.xcassets in Resources */,
 				BD0A72272A8BFCDC00B806E2 /* Assets.xcassets in Resources */,
 			);

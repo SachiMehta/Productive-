@@ -3,7 +3,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var path = NavigationPath()
-    @State private var subtext = "Welcome to Productive+"
+    @State private var subtext = "welcome to productive+"
     @State private var navImg = "nav"
     @State private var lampOn = false
     // for music
@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack (path: $path){
             ZStack {
-                Color(red: 244 / 250, green: 236 / 250, blue: 236 / 250)
+                Color(red: 0.959, green: 0.924, blue: 0.925)
                     .ignoresSafeArea()
                 VStack {
                     Button(action: {
@@ -52,6 +52,8 @@ struct ContentView: View {
                 Text("\(subtext)")
                     .zIndex(2)
                     .position(x: 200, y: 200)
+                    .fontWeight (.heavy)
+                    .foregroundColor(Color(red: 0.643, green: 0.55, blue: 0.495))
                 Image("\(navImg)")
                     .resizable(resizingMode: .stretch)
                     .aspectRatio(contentMode: .fit)

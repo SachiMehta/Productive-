@@ -15,24 +15,28 @@ struct StudyTimer: View {
     
     var body: some View {
         ZStack {
-            Color(red: 244 / 250, green: 236 / 250, blue: 236 / 250)
+            Color(red: 0.959, green: 0.924, blue: 0.925)
                 .ignoresSafeArea()
             Image("timerBg")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .padding(.bottom, 120)
             VStack {
                 Text("Timer")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .foregroundColor(Color(red: 0.523, green: 0.383, blue: 0.333))
+                    .padding(.top, 50)
                 Spacer()
                 Text("\(vm.time)")
                     .font(.system(size: 70, weight: .medium, design: .rounded))
+                    .foregroundColor(Color(red: 0.523, green: 0.383, blue: 0.333, opacity: 1.0))
                     .alert("Timer done!", isPresented: $vm.showingAlert) {
                                 Button("Continue", role: .cancel) {
                                     // notif???
                                 }
                             }
-                    .padding(.vertical)
+                    .padding()
                 
                 // binding here since user changes the #
                 Slider(value: $vm.minutes, in: 0...45, step: 5)
